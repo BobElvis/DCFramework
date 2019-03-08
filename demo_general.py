@@ -45,7 +45,7 @@ def demo_customers(client: GeneralClient):
         print("Name: {}".format(name))
         for i, account in enumerate(accounts):
             account_number = account["accountNumber"]
-            print(" - Account {}: {}".format(i, account_number))g
+            print(" - Account {}: {}".format(i, account_number))
 
 
 if __name__ == "__main__":
