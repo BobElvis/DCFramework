@@ -172,8 +172,8 @@ class PersonClient(BaseClient):
     def get_due_payments_by_id(self, account_number: str, payment_id: str):
         return self.get("/payments/" + account_number + "/due/" + payment_id, {})
 
-    def get_transactions(self, account_number: str):
-        return self.get("/transactions/" + account_number + "/", {})
+    def get_transactions(self, account_number: str, from_date: str, to_date: str):
+        return self.get("/transactions/" + account_number + "/", {"fromDate": from_date, "toDate": to_date})
 
     def put_block_card(self, card_id):
         return self.put("/cards/" + card_id + "/block", {})
