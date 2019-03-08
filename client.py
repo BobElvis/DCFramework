@@ -42,6 +42,9 @@ class PaymentDto:
 
 class BaseClient:
     def __init__(self):
+        if _client_id is None:
+            raise AttributeError("We did not find your keys. Create a '.env' file.")
+
         aws_signing_v4 = AwsSigningV4(
             aws_access_key_id=_client_id,
             aws_secret_access_key=_client_secret,
