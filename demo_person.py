@@ -13,6 +13,7 @@ def main():
 
     # ACCOUNTS:
     if account_print:
+        print("Account endpoints:")
         accounts = p.get_accounts()
         print_response(accounts)
 
@@ -26,6 +27,7 @@ def main():
 
     # CARDS:
     if card_print:
+        print("Card endpoint")
         cards = p.get_cards()
         print_response(cards)
 
@@ -41,10 +43,12 @@ def main():
 
     # CUSTOMERS
     if customer_print:
+        print("Customer endpoint")
         print_response(p.get_customer_details())
 
     # PAYMENT - Static data still so why did I even do this?
     if payment_print:
+        print("Payment and transaction endpoint")
         accounts = p.get_accounts()
 
         debit = accounts.json()['accounts'][0]['accountNumber']
