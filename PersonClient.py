@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
-from UrlHeaderGenerator import UrlHeaderGenerator
-from aws_signing import AwsSigningV4
+from aws import UrlHeaderGenerator
+from aws import AwsSigningV4
 import requests
 
 
