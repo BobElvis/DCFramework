@@ -59,7 +59,7 @@ def main():
         # Getting 403 here, maybe I am not so good.
         print(p.post_initiate_payment(payDto))
 
-        print_response(p.get_transactions(debit))
+        print_response(p.get_transactions(debit, "2018-06-06", "2018-07-07"))
 
 
 if __name__ == "__main__":
